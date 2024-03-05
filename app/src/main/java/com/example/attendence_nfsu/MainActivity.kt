@@ -27,13 +27,11 @@ class MainActivity : AppCompatActivity() {
                 //Toast.makeText(this, "hey! $uname", Toast.LENGTH_LONG).show()
                 if (name == uname) {
                     if (Pass == pass) {
-                        Toast.makeText(this, "welcome $uname", Toast.LENGTH_LONG).show()
-                        val intent = Intent(this, selectingclassforattendence::class.java)
-                        intent.putExtra("displayname", uname)
-                        startActivity(intent)//new activity call via intent
+                        Toast.makeText(this, "Welcome $uname", Toast.LENGTH_LONG).show()
+                        startActivity(Intent(this, selectingclassforattendence::class.java).putExtra("displayname", uname))//new activity call via intent
                         return@outsideforeach
                     }
-                    Toast.makeText(this, "wrong Password dear $uname", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Wrong Password $uname", Toast.LENGTH_LONG).show()
                 }
 
             }
